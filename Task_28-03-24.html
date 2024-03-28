@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .cd1,
+      .cd2,
+      .cd3,
+      .cd4,
+      .cd5 {
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+        margin: 10px;
+      }
+      .ip1:active ~ .cd1 {
+        transform: translate(10px, 20px);
+      }
+      .ip2:active ~ .cd2 {
+        transform: scalex(-1);
+      }
+      .ip3:active ~ .cd3 {
+        transform: rotate(45deg);
+      }
+      .ip4:active ~ .cd4 {
+        transform: skewx(20deg);
+      }
+      .ip5:active ~ .cd5 {
+        transform: perspective(100px) scale(1) rotatey(45deg);
+      }
+      /* div {
+        display: inline-block;
+      } */
+    </style>
+    <title>Task 28-03-24</title>
+  </head>
+  <body>
+    <input type="radio" class="ip1" />Translate
+    <input type="radio" class="ip2" />scale
+    <input type="radio" class="ip3" />rotate
+    <input type="radio" class="ip4" />skew
+    <input type="radio" class="ip5" />perspective
+
+    <div class="cd1">Translate</div>
+    <div class="cd2">scale</div>
+    <div class="cd3">rotate</div>
+    <div class="cd4">skew</div>
+    <div class="cd5">perspective</div>
+  </body>
+</html>
